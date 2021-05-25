@@ -23,9 +23,9 @@ The Electronics and Sleep infographic highlights how technology affects the mode
 
 ### Sources: 
 
-•	https://www.sleepfoundation.org/
-•	
-•	https://www.sleepfoundation.org/professionals/sleep-americar-polls/2014-sleep-modern-family
+--	https://www.sleepfoundation.org/
 
-•	https://www.sleepcycle.com
+--	https://www.sleepfoundation.org/professionals/sleep-americar-polls/2014-sleep-modern-family
+
+--	https://www.sleepcycle.com
 
