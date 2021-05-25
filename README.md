@@ -7,7 +7,7 @@ The Electronics and Sleep infographic highlights how technology affects the mode
 
 
 Visualize/Analyse:
-	The sleep habits of children on school days and non-school days.
+	The sleep habits of children during school days and non-school days.
 	Impact of parents having electronic device in their bedroom.
 	Analysing children who leave electronics on at night are reported to be more likely to fall asleep in school.
 	“Know yourself sleep diary” to help individual practices to help them sleep better.
