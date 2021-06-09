@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Know yourself sleep diary</title>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <body>
+        <div class="container">
+            <div class="jumbotron" style="text-align: center">
+                <h1>Know yourself sleep diary</h1>
+                <p>Lets find out!</p>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <form method="POST" action="/send" role="form", name="petform">
+                        <div class="wrap-input100 " >
+                            <span class="label-input100">Activities</span>
+                            <select  class="input100" id="activities" name="activities" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+                                    <option value="">Select</option>
+                                    <option value="1">Bath</option>
+                                    <option value="2">Music</option>
+                                    <option value="3">Sex</option>
+                                    <option value="4">Pray</option>
+                                    <option value="5">Read</option>
+                                    <option value="6">Excercise</option>
+                                    <option value="7">Alcohol</option>
+                                    <option value="8">Talking_to_spouse</option>
+                                    <option value="9">Medication</option>
+                                </select>
+                            <span class="focus-input100"></span>
+                        
+                        </div>
+                        <div class="wrap-input100" style="border-bottom: 0px;" >
+                            <span class="label-input100">Devices frequently used in Bedroom</span>
+                                <select  class="input100" id="devicesBR" name="devicesBR" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+                                    <option value="">Select</option>
+                                    <option value="1">Tv</option>
+                                    <option value="2">smartphone</option>
+                                    <option value="3">ipad_tablet</option>
+                                    <option value="4">videogame</option>
+                                    <option value="5">computer</option>
+                                    <option value="6">laptop</option>
+                                    <option value="7">mp3</option>
+                                    <option value="8">music_gadgets</option>
+                                    <option value="9">Unknown</option>
+                                </select>
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100" style="border-bottom: 0px;" >
+                            <span class="label-input100">How many devices do you have in Bedroom?</span>
+                                <select class="input100"  id="devices_count" name="devices_count" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+                                    <option value="">Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100" style="border-bottom: 0px;" >
+                            <span class="label-input100">How do you use your devices in bedroom</span>
+                                <select class="input100"  id="usage" name="usage" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+                                    <option value="">Select</option>
+                                    <option value="1">frequently</option>
+                                    <option value="2">sometimes</option>
+                                    <option value="3">never</option>
+                                </select>
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100" style="border-bottom: 0px;" >
+                            <span class="label-input100">Bedroom Rules</span>
+                                <select class="input100"  id="Rules" name="Rules" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+                                    <option value="">Select</option>
+                                    <option value="1">bedtime</option>
+                                    <option value="2">wakeuptime</option>
+                                    <option value="3">dinnertime</option>
+                                    <option value="4">textinbed</option>
+                                    <option value="5">on_off</option>
+                                    <option value="6">homework_late</option>
+                                    <option value="7">music_late</option>
+                                    <option value="8">games_late</option>
+                                    <option value="9">devices_late</option>						
+                                </select>
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 " >
+                            <span class="label-input100">Do you follow Bedroom Rules </span>
+                            <select  class="input100" id="enforce" name="enforce" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+                                <option value="">Select</option>
+                                <option value="1">yes</option>
+                                <option value="2">no</option>
+                                </select>
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 " >
+                            <span class="label-input100">Filter yours or your child's behaviour during </span>
+                            <select  class="input100" id="behaviour" name="behaviour" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+                                <option value="">Select</option>
+                                    <option value="1">school_performance</option>
+                                    <option value="2">mood</option>
+                                    <option value="3">behaviour</option>
+                                    <option value="4">quality_of_life</option>
+                                    <option value="5">active</option>
+                                    <option value="6">extra lessons</option>
+                                    <option value="7">send_read_textinbed</option>
+                                    <option value="8">pets</option>
+                                    <option value="9">lighting_temp</option>	
+                                </select>
+                                <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 " >
+                            <span class="label-input100">How do you rate yours or child's behaviour today?</span>
+                            <select  class="input100" id="rate" name="rate" style="padding: 10px 5px;margin-top: 15px;border: 2px solid #d9d9d9;" >
+                                <option value="">Select</option>
+                                    <option value="1">10</option>
+                                    <option value="2">9</option>
+                                    <option value="3">8</option>
+                                    <option value="4">7</option>
+                                    <option value="5">6</option>
+                                    <option value="6">5</option>
+                                    <option value="7">4</option>
+                                    <option value="8">3</option>
+                                    <option value="9">2</option>	
+                                </select> 
+                                <span class="focus-input100"></span>
+                        </div>                             
+                        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                        <input type="submit" value="submit" class="btn btn-default">
+                        <input type="checkbox" name="vehicle3" value="Boat" checked>
+
+
+                        <h2><a href="/send/rate">Know yourself sleep Diary</a></h2>
+                        {{ prediction_text }}
+
+                        <script type="text/javascript">
+                            var userInput = Number(prompt("please rate your day", ""));
+
+                            if (userInput => 7) {
+                            alert("welldone");
+                            }
+                            else if (userInput => 5) {
+                            alert("You managed");
+                            }                            
+                            else 
+                            {
+                            alert("catch up your sleep");
+                            }                                              
+                        
+                        </script>
+
+
+
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
